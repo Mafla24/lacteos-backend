@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+const express = require ("express");
+const mongoose = require ("mongoose");
+require("dotenv").config();
+const productosRoutes = require("./routes/productos");
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const app = express();
+const port = 9000;
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// rutas
+app.get("/", (req, res) => {
+    res.send("Bienvenidos a esta API");
+}); 
+
+//prefijos
+
+app.use('/api', );
+
+// conexion a mongodb por medio de mongoose
+
+mongoose
+    .connect(process.env.MONGODB_URI)
+    .then(()=>console.log("Conexion con mongodb web "))
+    .catch((error) => console.error(error));
+
+app.listen(port, () => console.log("El servidor esta escuchando el puerto", port));
