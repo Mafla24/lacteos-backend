@@ -13,7 +13,8 @@ app.get("/", (req, res) => {
 
 //prefijos
 
-app.use('/api', );
+app.use(express.json());
+app.use('/api', productosRoutes);
 
 // conexion a mongodb por medio de mongoose
 
