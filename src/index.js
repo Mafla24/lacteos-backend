@@ -1,7 +1,9 @@
 const express = require ("express");
 const mongoose = require ("mongoose");
+const ventas = require("./models/ventas");
 require("dotenv").config();
 const productosRoutes = require("./routes/productos");
+const ventasRoutes = require("./routes/ventas");
 
 const app = express();
 const port = 9000;
@@ -15,6 +17,7 @@ app.get("/", (req, res) => {
 
 app.use(express.json());
 app.use('/api', productosRoutes);
+app.use("/api", ventasRoutes);
 
 // conexion a mongodb por medio de mongoose
 
