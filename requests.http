@@ -1,0 +1,30 @@
+### //agregar producto
+POST http://localhost:9000/api/productos HTTP/1.1
+Content-Type: application/json
+
+{
+    "sku": 345,
+    "producto": "Leche Entera 1100 mL",
+    "descripcion": "Bolsa de leche UHT entera por 1100 mL",
+    "valor": 3700
+}
+
+### //listar productos
+GET http://localhost:9000/api/productos HTTP/1.1
+
+### //buscar producto
+GET http://localhost:9000/api/productos/6173ad512253c8b4ce9ea180 HTTP/1.1
+
+### //editar productos
+PUT http://localhost:9000/api/productos/6173ad512253c8b4ce9ea180 HTTP/1.1
+Content-Type: application/json
+
+{
+    "sku": 345,
+    "producto": "Leche Entera 1100 mL",
+    "descripcion": "Bolsa de leche UHT entera por 1100 mL",
+    "valor": 3000
+}
+
+### //eliminar producto
+DELETE http://localhost:9000/api/productos/6173ad512253c8b4ce9ea180 HTTP/1.1

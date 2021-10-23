@@ -1,0 +1,19 @@
+{
+  "name": "lacteos-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Mafla24/lacteos-backend.git",
+  "author": "oskarb15 <racksodesign@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "scripts": {
+    "start": "nodemon src/index.js"
+  }
+}
