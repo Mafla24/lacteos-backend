@@ -13,17 +13,17 @@ Content-Type: application/json
 GET http://localhost:9000/api/productos HTTP/1.1
 
 ### //buscar producto
-GET http://localhost:9000/api/productos/6173ad512253c8b4ce9ea180 HTTP/1.1
+GET http://localhost:9000/api/productos/617949b805b894887edc658f HTTP/1.1
 
 ### //editar productos
-PUT http://localhost:9000/api/productos/6173ad512253c8b4ce9ea180 HTTP/1.1
+PUT http://localhost:9000/api/productos/617949b805b894887edc658f HTTP/1.1
 Content-Type: application/json
 
 {
     "sku": 345,
     "producto": "Leche Entera 1100 mL",
     "descripcion": "Bolsa de leche UHT entera por 1100 mL",
-    "valor": 3000
+    "valor": 4000
 }
 
 ### //eliminar producto
@@ -52,18 +52,19 @@ Content-Type: application/json
 GET http://localhost:9000/api/ventas HTTP/1.1
 
 ### buscar una venta
-GET http://localhost:9000/api/ventas/617454c1646747fb590e6d80 HTTP/1.1
+GET http://localhost:9000/api/ventas/61794a0c05b894887edc6592 HTTP/1.1
 
 ### editar una venta
-PUT http://localhost:9000/api/ventas/617454c1646747fb590e6d80 HTTP/1.1
+PUT http://localhost:9000/api/ventas/61794a0c05b894887edc6592 HTTP/1.1
 Content-Type: application/json
+
 {
     "idventa": 123,
-    "fecha": "21/10/2021",
+    "fecha":"21/10/2021",
     "producto": "Queso",
     "cantidad": 2,
-    "preciounit": 5000,
-    "valortotal": 11000,
+    "preciounit": 4000,
+    "valortotal": 8000,
     "cliente": "Oscar",
     "vendedor": "Johana",
     "estado": "En proceso"
@@ -71,5 +72,5 @@ Content-Type: application/json
 
 
 ### eliminar venta
-DELETE http://localhost:9000/api/ventas/617454c1646747fb590e6d80 HTTP/1.1
+DELETE http://localhost:9000/api/ventas/61794a0c05b894887edc6592 HTTP/1.1
 
